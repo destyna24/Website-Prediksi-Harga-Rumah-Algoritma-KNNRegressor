@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<!-- Judul Halaman -->
+	<title>Prediksi Harga Rumah</title>
+	
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	<!-- Icon -->
+	<link rel="shortcut icon" href="../static/images/1255517.ico">
+	
+	<!-- CSS -->
+	<link rel="stylesheet" href="../static/css/bootstrap.min.css">
+	<link rel="stylesheet" href="../static/css/client_side.css">
+	
+	<!-- JavaScript -->
+	<script src="../static/js/jquery_3.6.0.min.js" ></script>
+	<script src="../static/js/bootstrap_3.4.1.min.js"></script>
+	<script src="https://kit.fontawesome.com/d1dd01a62e.js" crossorigin="anonymous"></script>
+	<style>
+		h2{
+			font-size: 5.3vw;
+			/* color:#2c3e50; */
+		}
+		h4{
+			font-size: 2vw;
+			/* color:#e67e22; */
+		}
+		h3{
+			font-size: 3vw;
+		}
+		p{
+			font-size: 1vw;
+		}
+	</style>
+</head>
+
+<body id="halamanku" data-spy="scroll" data-target=".navbar" data-offset="600" >
+
+	<!-- Navigation Bar -->
+	<nav class="navbar  navbar-fixed-top">
+		<div class="container" style="margin-top: 20px;" >
+			
+			<!-- Logo -->
+			<div class="navbar-header" style="margin-bottom: 10px;">
+				<img src='../static/images/1255517.png' alt="Rumah Logo" 
+				width="50" height="50" align="left">
+				<!--<a class="navbar-brand" href="#halamanku">&#160; Orbit Future Academy</a>-->
+			</div>
+			<!-- Daftar Halaman -->
+			<div class="collapse navbar-collapse" style="margin-bottom: 10px;" id="myNavbar">
+				<ul class="nav navbar-nav navbar-right">
+					<li><a href="#home">HOME</a></li>
+					<li><a href="#aplikasi">PREDIKSI</a></li>
+					<li><a href="#aboutus">ABOUT US</a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+
+	<!-- Bagian Halaman (Informasi) -->
+	<div class="container-fluid">
+		<div id="home"  style= "margin-left: 60px; margin-top: 220px;" >
+			<div class="row">
+				<div class="col-sm-6">
+					<!-- Deskripsi Aplikasi -->
+					<h2>Tentukan <br> Masa Depanmu</h2>
+					<h4>Persiapkan dirimu untuk memiliki rumah yang sesuai dengan keinginanmu</h4>
+					
+					<!-- Tombol Mulai -->
+					<nav id="navgo" class="navbar" style="background-color:#0B172A; z-index: 1;">
+						<ul class="nav nav-pills">
+							<li class="nav-item">
+								<a class="btn btn-default btn-lg" href="#aplikasi" style="background-color:#bc4123">Coba Sekarang</a>
+							</li>
+						</ul>
+					</nav>
+				</div>
+				<div class="col-sm-6">
+					<div class="slideshow-container" >
+						<br>
+						<!-- Gambar Deskripsi Aplikasi -->
+						<div class="mySlides fade">
+							<img src= "../static/images/rumah_1.jpg" style="width:80%">
+						  </div>
+						
+						  <div class="mySlides fade">
+							<img src="../static/images/rumah_2.jpg" style="width:80%">
+						  </div>
+						
+						  <div class="mySlides fade">
+							<img src="../static/images/rumah_3.jpg" style="width:80%">
+						  </div>
+						
+						  <!-- Next and previous buttons 
+						  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+						  <a class="next" onclick="plusSlides(1)">&#10095;</a>-->
+						</div>
+					</div>
+				</div>
+				</div>
+		</div>
+	</div>
+	
+	
+	<div class="container-fluid">
+			<!-- Bagian Halaman (Aplikasi) -->
+	<div id="aplikasi" data-bs-spy="scroll" data-bs-target="#navgo" data-bs-offset="0" class="scrollspy-example" tabindex="0" >
+		<div class="row" style="margin-top: 220px;">
+			<div class="col-sm-6">
+				</br>
+				<!-- Input Nilai Pengukuran dari Pengguna -->
+				<h3 style="margin-left: 50px;">Karakteristik Rumah </h3>
+				<form>
+					<div class="form-group" style="margin-left: 50px;">
+						<!-- Input Slider untuk Nilai Pengukuran Bunga Iris -->
+						<label for="range_luas_bangunan" style="font-size: 1.5vw; ">Luas Bangunan (M) </label>&nbsp;&rarr;&nbsp;
+						<span id="rangeVal_luas_bangunan"style="font-size: 1.5vw; ">20<!-- Default value --></span>
+						<input type="range" min="20" max="1200" step="5" value="20" class="slider" id="range_luas_bangunan" style="height: 1vw;"
+						onInput="$('#rangeVal_luas_bangunan').html($(this).val())">
+						</br>
+						<label for="range_luas_tanah"  style="font-size: 1.5vw; ">Luas Tanah (M) </label>&nbsp;&rarr;&nbsp;
+						<span id="rangeVal_luas_tanah" style="font-size: 1.5vw; ">20<!-- Default value --></span>
+						<input type="range" min="20" max="1500" step="5" value="20" class="slider" id="range_luas_tanah" style="height: 1vw;"
+						onInput="$('#rangeVal_luas_tanah').html($(this).val())">
+						</br>
+						<label for="range_kamar_tidur" style="font-size: 1.5vw; ">Kamar Tidur (Jumlah) </label>&nbsp;&rarr;&nbsp;
+						<span id="rangeVal_kamar_tidur" style="font-size: 1.5vw; ">1<!-- Default value --></span>
+						<input type="range" min="1" max="12" step="1" value="1" class="slider" id="range_kamar_tidur" style="height: 1vw;"
+						onInput="$('#rangeVal_kamar_tidur').html($(this).val())">
+						</br>
+						<label for="range_kamar_mandi" style="font-size: 1.5vw; ">Kamar Mandi (Jumlah) </label>&nbsp;&rarr;&nbsp;
+						<span id="rangeVal_kamar_mandi" style="font-size: 1.5vw; ">1<!-- Default value --></span>
+						<input type="range" min="1" max="12" step="1" value="1" class="slider" id="range_kamar_mandi" style="height: 1vw;"
+						onInput="$('#rangeVal_kamar_mandi').html($(this).val())">
+						</br>
+						<label for="range_garasi" style="font-size: 1.5vw; ">Garasi (Jumlah) </label>&nbsp;&rarr;&nbsp;
+						<span id="rangeVal_garasi" style="font-size: 1.5vw; ">0<!-- Default value --></span>
+						<input type="range" min="0" max="12" step="1" value="0" class="slider" id="range_garasi" style="height: 1vw;"
+						onInput="$('#rangeVal_garasi').html($(this).val())">
+						</br>						
+						<!-- Tombol Prediksi -->
+						<button type="submit" id="prediksi_submit" style="background-color:#bc4123;color: #fff; font-size: 1.5vw; background-size: 1vw;"" class="btn btn-default btn-lg" >Prediksi </button>
+					</div>
+				</form>
+			</div>
+			<div class="col-sm-6">
+				<br>
+				<!-- Bagian Halaman untuk Hasil Prediksi -->
+				<div id="hasil_prediksi" align="center">
+						<!-- Hasil Prediksi akan ditampilkan di sini-->
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+	
+
+	<!-- Bagian Halaman (Anggota Kelompok) -->
+	<div id="aboutus" class="container-fluid text-center" style="margin-top: 200px;">
+		<h2>About Us</h2>
+		<h4>Tim Deployment dan Tim DS</h4>
+		<br>
+		<div class="row slideanim">
+			<div class="col-sm-4">
+				<img class = gambar src= "../static/images/WhatsApp Image 2022-07-16 at 07.28.22 ii.jpeg" style="width:35%">
+				<h4>Desty Nurul Anitsa</h4>
+				<p>Politeknik Harapan Bersama</p>
+			</div>
+			<div class="col-sm-4">
+				<img class = gambar src= "../static/images/handep_2.jpg" style="width:35%">
+				<h4>Reyhan Devara</h4>
+				<p>Universitas Padjadjaran</p>
+			</div>
+			<div class="col-sm-4">
+				<img class = gambar src= "../static/images/nabila.jpg" style="width:35%">
+				<h4>Nabila Rasya Putri Amani </h4>
+				<p>Institut Teknologi Telkom Purwokerto</p>
+			</div>
+		</div>
+	    <br>
+	    <div class="row slideanim">
+			<div class="col-sm-4">
+				<img class = gambar src= "../static/images/ryana.jpg" style="width:35%">
+				<h4>Ryana Purwaningrum</h4>
+				<p>Institut Teknologi Telkom Purwokerto</p>
+			</div>
+			<div class="col-sm-4">
+				<img class = gambar src= "../static/images/diva.jpg" style="width:35%">
+				<h4>Diva Hana Shabira</h4>
+				<p>Universitas Padjadjaran</p>
+			</div>
+			<div class="col-sm-4">
+				<img class = gambar src= "../static/images/putri.jpeg" style="width:35%">
+				<h4>Putri Ardianti</h4>
+				<p>Institut Teknologi Telkom Purwokerto</p>
+			</div>
+	    </div>
+	</div>
+
+	<!-- Footer -->
+	<footer class="container-fluid">
+		<div>
+			<a href="#halamanku" title="To Top" >
+				<span class="glyphicon glyphicon-chevron-up"></span>
+			</a>
+		</div>
+	</footer>
+			<div class="row"style="background-color: #bc4123;">
+				<div class="col-md-12">
+					<div class="row text-center"> 
+						<div class="col-6 col-sm-6 col-md-6" > 
+							<h5 style="font-size: 1.4vw;"><font color=#F6F1E3><b>Help</b></font></h5>  
+							<a style="font-size: 1.4vw;" href="#"><font color=#F6F1E3>Terms & Privacy</font> </a> <br>
+						</div>
+						<div class="col-6 col-sm-6 col-md-6" >
+							<h5 style="font-size: 1.4vw;"><font color=#F6F1E3><b>Social</b></font></h5> 
+							<a style="font-size: 1.4vw;" href="https://www.facebook.com/"><font color=#F6F1E3><i class="fab fa-facebook"></i></font> </a> 
+							<a style="font-size: 1.4vw;" href="https://www.instagram.com/"><font color=#F6F1E3><i class="fab fa-instagram"></i></font> </a> 
+							<a style="font-size: 1.4vw;" href="https://web.whatsapp.com/"><font color=#F6F1E3><i class="fab fa-whatsapp"></i></i></font> </a>
+						</div>  
+						</div>
+				</div>
+			</div>
+		<div class="row" style="background-color: #9a2f14;">
+			<p  class="text-center"><a style="color: rgb(251, 249, 249);" href="https://orbitfutureacademy.id/">orbitfutureacademy.id</a></p>
+		</div>
+	</div>
+		
+	
+
+	<!-- JavaScript untuk Animasi Scroll dan Prediksi Model -->
+	<script  src={{ url_for('static', filename='/js/client_side.js') }}></script>
+
+</body>
+</html>
